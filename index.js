@@ -32,8 +32,7 @@ var awsmaLite = {
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
           IdentityPoolId: config.identityPoolId
         })
-        mobileAnalyticsClient = new AMA.Manager(config)
-        return mobileAnalyticsClient
+        return new AMA.Manager(config)
       })
     return mobileAnalyticsManagerPromise
   },
